@@ -1,0 +1,2 @@
+ssh: connect to host server1-mgmt port 22: No route to host
+scp: Connection closed

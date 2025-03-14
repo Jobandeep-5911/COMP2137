@@ -1,0 +1,22 @@
+---Host/Student info----
+
+Running on Thu Mar 13 08:47:45 PM EDT 2025
+Run by joban - () on host
+ Static hostname: generic-vm
+      Machine ID: 8ea054da10d74607b58d5befdf5895fd
+Operating System: Ubuntu 24.04.1 LTS
+a98742121b14ebe6350c4bf8245d0062  ./check-assign2-script.sh - a98742121b14ebe6350c4bf8245d0062  -
+------------------------
+
+---Start of Assignment2.sh Check------
+---Running makecontainers.sh----------
+This script performs many tasks. Please be patient
+To see more about what it is doing as it does it, use the --verbose option
+You may ignore any messages about Open vSwitch or dpkg-preconfigure being unable to re-open stdin
+DO NOT use control-Z when this script is running.
+# Host server1-mgmt found: line 5
+/home/joban/.ssh/known_hosts updated.
+Original contents retained as /home/joban/.ssh/known_hosts.old
+---Retrieving assignment2.sh script---
+Retrieved assignment2 script
+Failed to copy assignment2.sh to server1
