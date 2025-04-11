@@ -1,0 +1,29 @@
+- name: Install Apache2 and configure firewall on target1
+  hosts: target1-mgmt
+  remote_user: remoteadmin
+  tasks:
+    - name: Install Apache2
+      apt:
+        name: apache2
+        state: present
+        update_cache: yes
+
+    - name: Install ufw (Uncomplicated Firewall)
+      apt:
+        name: ufw
+        state: present
+
+    - name: Allow SSH on firewall
+      ufw:
+        rule: allow
+        port: 22
+        proto: tcp
+        state: enabled
+
+    - name: Allow HTTP on firewall
+      ufw:
+        rule: allow
+        port: 80
+        proto: tcp
+        state: enabled
+

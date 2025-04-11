@@ -1,0 +1,29 @@
+- name: Install MySQL and configure firewall on target2
+  hosts: target2-mgmt
+  remote_user: remoteadmin
+  tasks:
+    - name: Install MySQL
+      apt:
+        name: mysql-server
+        state: present
+        update_cache: yes
+
+    - name: Install ufw (if not already installed)
+      apt:
+        name: ufw
+        state: present
+        update_cache: yes
+
+    - name: Enable UFW and allow SSH
+      ufw:
+        rule: allow
+        name: 'OpenSSH'
+        state: enabled
+
+    - name: Allow MySQL (port 3306) on firewall
+      ufw:
+        rule: allow
+        port: 3306
+        proto: tcp
+        state: enabled
+
